@@ -31,7 +31,9 @@ export const getServerSideProps = async (ctr) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(
+    "https://pizza-aea8zlt0c-bmat321.vercel.app/api/products"
+  );
   return {
     props: {
       pizzaList: res.data,

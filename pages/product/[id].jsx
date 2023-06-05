@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
@@ -107,7 +108,7 @@ const Product = ({ pizza }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    `https://pizza-aea8zlt0c-bmat321.vercel.app/api/products/${params.id}`
   );
   return {
     props: {

@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import styles from "../styles/Cart.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import {
-  PayPalScriptProvider,
   PayPalButtons,
+  PayPalScriptProvider,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
 import axios from "axios";
+import Image from "next/image";
 import { useRouter } from "next/router";
-import { reset } from "../redux/cartSlice";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import OrderDetails from "../components/OrderDetails";
+import { reset } from "../redux/cartSlice";
+import styles from "../styles/Cart.module.css";
 
 // This values are the props in the UI
 
@@ -27,7 +26,10 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/orders", data);
+      const res = await axios.post(
+        "https://pizza-aea8zlt0c-bmat321.vercel.app/api/orders",
+        data
+      );
 
       res.status === 201 && router.push("/orders/" + res.data._id);
       dispatch(reset());
