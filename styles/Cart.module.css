@@ -1,0 +1,136 @@
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+}
+
+.imgContainer {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.name {
+    font-weight: 500;
+    color: #008850;
+    font-size: 18px;
+
+}
+
+.total {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 90%;
+    max-height: 300px;
+    background-color: #333;
+    padding-top: 10px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    flex-direction: column;
+}
+
+.totalTextTitle {
+    margin-right: 10px;
+}
+
+.button {
+    height: 30px;
+    font-weight: bold;
+    color: #008850;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.paymentMethod {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: #008850;
+    background-color: white;
+
+}
+
+@media screen and (max-width:480px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .table {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trTitle {
+        display: none;
+    }
+
+    .tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgContainer {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    .name,
+    .total {
+        font-size: 24px;
+    }
+
+    .extras,
+    .quantity,
+    .price {
+        font-size: 22px;
+    }
+
+    .price::before {
+        content: "Price: ";
+        font-weight: 500;
+    }
+
+    .quantity::before {
+        content: "Quantity: ";
+        font-weight: 500;
+    }
+
+    .total::before {
+        content: "Total: ";
+        font-weight: 500;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+}

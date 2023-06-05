@@ -1,0 +1,110 @@
+.mainButton {
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #008850;
+    cursor: pointer;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(145, 143, 143, 0.704);
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+    position: fixed;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 500px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+}
+
+.item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+.priceCointainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputS {
+    width: 25%;
+}
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.extraItems {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+.extraItem {
+    border: 1px solid #008850;
+    color: #008850;
+    background-color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.addButton {
+    align-self: flex-end;
+    color: white;
+    background-color: #008850;
+    padding: 5px 0px;
+    width: 25%;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+}

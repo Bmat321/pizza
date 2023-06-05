@@ -1,0 +1,144 @@
+.container {
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer {
+    height: 80%;
+    width: 80%;
+    position: relative;
+}
+
+.price {
+    color: #008850;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #008850;
+}
+
+.sizes {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.size:nth-child(2) {
+    height: 40px;
+    width: 40px;
+}
+
+.size:last-child {
+    height: 50px;
+    width: 50px;
+}
+
+.small {
+    position: absolute;
+    top: -4px;
+    right: -0px;
+    background-color: #008850;
+    color: white;
+    font-size: 15px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.ingredient {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.quantity {
+    height: 30px;
+    width: 50px;
+}
+
+.button {
+    height: 30px;
+    margin-left: 10px;
+    background-color: #008850;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width:480px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    .imgContainer {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .sizes {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .ingredient {
+        flex-direction: column;
+    }
+
+    .option {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .checkbox {
+        height: 26px;
+        width: 25px;
+    }
+
+    .quantity,
+    .button {
+        height: 50px;
+        padding: 10px 20px;
+    }
+
+}
