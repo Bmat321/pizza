@@ -3,7 +3,7 @@ import styles from "../../styles/Order.module.css";
 import Image from "next/image";
 import axios from "axios";
 
-export const Order = ({ order }) => {
+const Order = ({ order }) => {
   const status = order.status;
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;
@@ -92,6 +92,8 @@ export const Order = ({ order }) => {
     </div>
   );
 };
+
+export default Order;
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
