@@ -6,7 +6,7 @@ import Link from "next/link";
 const PizzaCard = ({ pizza }) => {
   return (
     <div className={styles.container}>
-      <Link href={`/product/${pizza._id}`} passHref>
+      <Link href={`${process.env.NEXT_PUBLIC_API_URL}/product/${pizza._id}`} passHref>
         <a>
           <Image src={pizza.img} height="500" width="500" alt="" />
         </a>
