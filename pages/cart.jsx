@@ -31,7 +31,7 @@ const Cart = () => {
         data
       );
 
-      res.status === 201 && router.push("/orders/" + res.data._id);
+      res.status === 201 && router.push(`${process.env.NEXT_PUBLIC_API_URL}/orders/` + res.data._id);
       dispatch(reset());
     } catch (err) {
       console.log(err);
