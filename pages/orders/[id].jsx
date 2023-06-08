@@ -97,7 +97,7 @@ export default Order;
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://pizza-aea8zlt0c-bmat321.vercel.app/api/orders/${params.id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${params.id}`
   );
   return {
     props: {

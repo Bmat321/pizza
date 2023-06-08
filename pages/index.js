@@ -32,7 +32,7 @@ export const getServerSideProps = async (ctr) => {
     admin = true;
   }
   const res = await axios.get(
-    "https://pizza-aea8zlt0c-bmat321.vercel.app/api/products"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/products`
   );
   return {
     props: {

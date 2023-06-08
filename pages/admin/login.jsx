@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSignIn = async () => {
     try {
-      await axios.post("https://https://pizza-drab.vercel.app/api/login", {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         username,
         password,
       });

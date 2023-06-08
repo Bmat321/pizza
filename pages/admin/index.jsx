@@ -11,7 +11,7 @@ const Index = ({ orders, products }) => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        "https://https://pizza-drab.vercel.app/api/products/" + id
+        `${process.env.NEXT_PUBLIC_API_URL}/api/products/` + id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
@@ -24,7 +24,7 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status;
     try {
       const res = await axios.put(
-        "https://https://pizza-drab.vercel.app/api/orders/" + id,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/orders/` + id,
         {
           status: currentStatus + 1,
         }
@@ -131,10 +131,10 @@ export const getServerSideProps = async (ctr) => {
   }
 
   const productRes = await axios.get(
-    "https://https://pizza-drab.vercel.app/api/products"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/products`
   );
   const orderRes = await axios.get(
-    "https://https://pizza-drab.vercel.app/api/orders"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/orders`
   );
 
   return {

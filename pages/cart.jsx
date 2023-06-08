@@ -27,7 +27,7 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const res = await axios.post(
-        "https://pizza-aea8zlt0c-bmat321.vercel.app/api/orders",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/orders`,
         data
       );
 
